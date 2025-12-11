@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuviya – Your Inbox, Handled</title>
+    <meta name="description" content="The first agentic email client built for flow. Nuviya filters the chaos, understands the context, and executes the work—so you don't have to." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nuviya – Your Inbox, Handled" />
+    <meta property="og:description" content="The first agentic email client built for flow. AI agents that understand urgency, not just keywords." />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nuviya – Your Inbox, Handled" />
+    <meta name="twitter:description" content="The first agentic email client built for flow. AI agents that understand urgency, not just keywords." />
+    <meta name="twitter:image" content="/og-image.png" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='100' rx='20' fill='%23030105'/%3E%3Cline x1='25' y1='25' x2='25' y2='75' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='75' y1='25' x2='75' y2='75' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='25' y1='75' x2='75' y2='25' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='25' y1='25' x2='75' y2='75' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='25' cy='25' r='8' fill='white'/%3E%3Ccircle cx='25' cy='75' r='8' fill='white'/%3E%3Ccircle cx='75' cy='25' r='8' fill='white'/%3E%3Ccircle cx='75' cy='75' r='8' fill='white'/%3E%3C/svg%3E" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Inter Tight', 'sans-serif'],
+            },
+            colors: {
+              nuviya: {
+                bg: '#030105',
+                primary: '#7B2CBF',
+                accent: '#9D4EDD',
+                glass: 'rgba(36, 0, 70, 0.3)',
+                text: '#A1A1AA',
+              }
+            },
+            backgroundImage: {
+              'glow-gradient': 'radial-gradient(circle at center, rgba(123, 44, 191, 0.4) 0%, transparent 70%)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #030105;
+        color: white;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #030105;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7B2CBF;
+      }
+      ::selection {
+        background: #7B2CBF;
+        color: white;
+      }
+      
+      /* Cosmic Background Layer - Minimal & Deep */
+      .cosmic-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        pointer-events: none;
+        background: 
+          radial-gradient(circle at 50% -20%, rgba(123, 44, 191, 0.12) 0%, transparent 60%),
+          radial-gradient(circle at 100% 40%, rgba(67, 26, 107, 0.08) 0%, transparent 50%),
+          radial-gradient(circle at 0% 70%, rgba(36, 0, 70, 0.08) 0%, transparent 50%);
+      }
+
+      /* Refined Noise Overlay - Finer & Subtler */
+      .noise-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.02;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.559.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <div class="cosmic-bg"></div>
+    <div class="noise-bg"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
