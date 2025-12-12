@@ -23,10 +23,10 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="mb-12 relative group"
+          className="mb-8 sm:mb-10 md:mb-12 relative group"
         >
           <div className="absolute inset-0 bg-[#7B2CBF] blur-[60px] opacity-40 group-hover:opacity-60 transition-opacity duration-700 rounded-full" />
-          <Logo className="w-24 h-24 text-white relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
+          <Logo className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 text-white relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
         </motion.div>
 
         {/* Headline */}
@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ delay: 0.2, duration: 1 }}
-          className="font-display font-light text-6xl md:text-8xl tracking-tighter text-white mb-6 leading-[0.9]"
+          className="font-display font-light text-4xl sm:text-5xl md:text-6xl lg:text-8xl tracking-tighter text-white mb-6 leading-[0.9]"
         >
           Your Inbox, <span
             style={{
@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
-          className="text-[#A1A1AA] text-lg md:text-xl max-w-2xl font-light mb-10 leading-relaxed"
+          className="text-[#A1A1AA] text-base sm:text-lg md:text-xl max-w-2xl font-light mb-10 leading-relaxed"
         >
           {CONTENT.hero.subheadline}
         </motion.p>
@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 1 }}
-          className="flex flex-col sm:flex-row gap-4 items-center"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center"
         >
           <Button variant="primary" className="text-lg px-8 py-4" onClick={() => scrollTo('waitlist')}>
             {CONTENT.hero.cta}

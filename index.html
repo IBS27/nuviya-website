@@ -115,6 +115,30 @@
           radial-gradient(circle at 0% 70%, rgba(36, 0, 70, 0.08) 0%, transparent 50%);
       }
 
+      /* Mobile workflow animation */
+      @keyframes flowDown {
+        0% {
+          top: 0;
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          top: 100%;
+          opacity: 0;
+        }
+      }
+      .animate-flow-down {
+        animation: flowDown 6s linear infinite;
+      }
+      .animate-flow-down-delayed {
+        animation: flowDown 6s linear infinite 3s;
+      }
+
       /* Refined Noise Overlay - Finer & Subtler */
       .noise-bg {
         position: fixed;

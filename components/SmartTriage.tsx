@@ -69,41 +69,41 @@ export const SmartTriage: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <section className="py-32 px-4 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-16 md:py-24 lg:py-32 px-4 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         
         {/* Copy */}
         <div className="order-2 lg:order-1">
-          <h2 className="text-4xl md:text-5xl font-display font-light text-white mb-6">Keyboard First.<br/>Mouse Optional.</h2>
-          <p className="text-[#A1A1AA] text-lg mb-8 leading-relaxed">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-light text-white mb-4 md:mb-6">Keyboard First.<br/>Mouse Optional.</h2>
+          <p className="text-[#A1A1AA] text-base sm:text-lg mb-6 md:mb-8 leading-relaxed">
             Blaze through your morning triage. Custom keybinds allow you to dispatch dozens of emails in seconds without your fingers leaving the home row.
           </p>
           
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
             {actions.map((action) => (
               <div
                 key={action.key}
                 className={`
-                  flex items-center gap-3 px-4 py-3 rounded-lg border border-white/10 bg-white/5
+                  flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-white/10 bg-white/5
                   transition-all duration-300
                   ${activeAction === action.key ? 'border-[#7B2CBF] bg-[#7B2CBF]/10 shadow-[0_0_15px_rgba(123,44,191,0.3)]' : ''}
                 `}
               >
                 <span className={`
-                  w-8 h-8 flex items-center justify-center rounded font-mono text-sm
+                  w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded font-mono text-sm
                   transition-all duration-300
                   ${activeAction === action.key ? 'bg-[#7B2CBF] text-white' : 'bg-white/10 text-white'}
                 `}>
                   {action.key}
                 </span>
-                <span className="text-[#A1A1AA] text-sm font-medium">{action.label}</span>
+                <span className="text-[#A1A1AA] text-xs sm:text-sm font-medium">{action.label}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Visual Demo */}
-        <div className="order-1 lg:order-2 relative h-[400px] flex items-center justify-center">
+        <div className="order-1 lg:order-2 relative h-[280px] sm:h-[340px] md:h-[400px] flex items-center justify-center">
           <div className="relative w-full max-w-md [perspective:1000px]">
              {/* Active Card */}
              <motion.div

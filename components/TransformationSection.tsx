@@ -188,26 +188,26 @@ export const TransformationSection: React.FC = () => {
   const importantEmails = allEmails.filter(e => e.isImportant);
 
   return (
-    <section ref={containerRef} className="relative h-[250vh] w-full">
+    <section ref={containerRef} className="relative h-[180vh] sm:h-[200vh] md:h-[250vh] w-full">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden pt-24 px-4">
         
         {/* Text Header - Now part of the flow to ensure proper spacing */}
-        <div className="relative z-30 text-center w-full max-w-4xl mb-10 min-h-[100px] flex flex-col justify-end">
-           <motion.h2 
+        <div className="relative z-30 text-center w-full max-w-4xl mb-6 md:mb-10 min-h-[80px] md:min-h-[100px] flex flex-col justify-end">
+           <motion.h2
              style={{ opacity: orderOpacity }}
-             className="text-4xl md:text-5xl font-display font-light text-white mb-4"
+             className="text-3xl sm:text-4xl md:text-5xl font-display font-light text-white mb-3 md:mb-4"
            >
              Order from Chaos
            </motion.h2>
-           <motion.p 
+           <motion.p
              style={{ opacity: orderOpacity }}
-             className="text-[#A1A1AA] max-w-xl mx-auto text-lg"
+             className="text-[#A1A1AA] max-w-xl mx-auto text-base sm:text-lg"
            >
              Nuviya automatically categorizes and prioritizes your stream.
            </motion.p>
         </div>
 
-        <div className="relative w-full max-w-4xl h-[620px] border border-white/10 rounded-3xl bg-[#0a0510]/80 overflow-hidden shadow-2xl shrink-0 backdrop-blur-sm">
+        <div className="relative w-full max-w-4xl h-[450px] sm:h-[520px] md:h-[620px] border border-white/10 rounded-2xl md:rounded-3xl bg-[#0a0510]/80 overflow-hidden shadow-2xl shrink-0 backdrop-blur-sm">
           
           {/* CHAOS STATE */}
           <motion.div
@@ -240,26 +240,26 @@ export const TransformationSection: React.FC = () => {
                     duration: pos.duration,
                     ease: "easeInOut"
                   }}
-                  className={`absolute w-72 bg-white/5 ${borderColor} border rounded-lg backdrop-blur-sm ${shadowColor} overflow-hidden`}
+                  className={`absolute w-48 sm:w-60 md:w-72 bg-white/5 ${borderColor} border rounded-lg backdrop-blur-sm ${shadowColor} overflow-hidden`}
                   style={{
                     top: `${pos.top}%`,
                     left: `${pos.left}%`
                   }}
                 >
-                  <div className="flex items-start p-3 gap-3">
+                  <div className="flex items-start p-2 sm:p-3 gap-2 sm:gap-3">
                     {/* Avatar */}
-                    <div className={`w-9 h-9 rounded-full ${email.avatarColor} flex items-center justify-center text-white text-xs font-semibold shrink-0`}>
+                    <div className={`w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full ${email.avatarColor} flex items-center justify-center text-white text-[10px] sm:text-xs font-semibold shrink-0`}>
                       {email.initials}
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex justify-between items-start gap-2">
-                        <span className="text-white/90 text-sm font-medium truncate">{email.sender}</span>
-                        <span className="text-white/30 text-xs shrink-0">{email.time}</span>
+                      <div className="flex justify-between items-start gap-1 sm:gap-2">
+                        <span className="text-white/90 text-xs sm:text-sm font-medium truncate">{email.sender}</span>
+                        <span className="text-white/30 text-[10px] sm:text-xs shrink-0 hidden sm:inline">{email.time}</span>
                       </div>
-                      <p className="text-white/70 text-xs font-medium truncate mt-0.5">{email.subject}</p>
-                      <p className="text-white/40 text-xs truncate mt-0.5">{email.preview}</p>
+                      <p className="text-white/70 text-[10px] sm:text-xs font-medium truncate mt-0.5">{email.subject}</p>
+                      <p className="text-white/40 text-[10px] sm:text-xs truncate mt-0.5 hidden sm:block">{email.preview}</p>
                     </div>
                   </div>
 
@@ -281,47 +281,47 @@ export const TransformationSection: React.FC = () => {
           {/* ORDER STATE */}
           <motion.div
             style={{ opacity: orderOpacity }}
-            className="absolute inset-0 p-8 flex flex-col pt-20"
+            className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col pt-12 sm:pt-16 md:pt-20"
           >
-            <div className="flex justify-between items-center mb-4 px-2">
-              <span className="text-xs font-medium tracking-wider text-[#9D4EDD] uppercase">Priority Inbox</span>
-              <span className="text-xs text-white/30">{importantEmails.length} Items</span>
+            <div className="flex justify-between items-center mb-3 md:mb-4 px-1 sm:px-2">
+              <span className="text-[10px] sm:text-xs font-medium tracking-wider text-[#9D4EDD] uppercase">Priority Inbox</span>
+              <span className="text-[10px] sm:text-xs text-white/30">{importantEmails.length} Items</span>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 sm:gap-3">
               {importantEmails.map((email, i) => (
                 <motion.div
                   key={`order-${email.id}`}
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: i * 0.1 }}
-                  className="w-full bg-white/5 border border-[#7B2CBF]/30 rounded-lg hover:bg-white/10 hover:border-[#7B2CBF]/50 transition-all flex items-center px-5 py-3 gap-4 group"
+                  className="w-full bg-white/5 border border-[#7B2CBF]/30 rounded-lg hover:bg-white/10 hover:border-[#7B2CBF]/50 transition-all flex items-center px-3 sm:px-4 md:px-5 py-2 sm:py-3 gap-2 sm:gap-3 md:gap-4 group"
                 >
                   {/* Priority indicator */}
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] shadow-[0_0_10px_#9D4EDD] shrink-0" />
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#9D4EDD] shadow-[0_0_10px_#9D4EDD] shrink-0" />
 
                   {/* Avatar */}
-                  <div className={`w-10 h-10 rounded-full ${email.avatarColor} flex items-center justify-center text-white text-sm font-semibold shrink-0`}>
+                  <div className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full ${email.avatarColor} flex items-center justify-center text-white text-xs sm:text-sm font-semibold shrink-0`}>
                     {email.initials}
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <span className="text-white font-medium text-sm">{email.sender}</span>
+                      <span className="text-white font-medium text-xs sm:text-sm">{email.sender}</span>
                     </div>
-                    <p className="text-white/80 text-sm truncate">{email.subject}</p>
-                    <p className="text-white/40 text-xs truncate">{email.preview}</p>
+                    <p className="text-white/80 text-xs sm:text-sm truncate">{email.subject}</p>
+                    <p className="text-white/40 text-[10px] sm:text-xs truncate hidden sm:block">{email.preview}</p>
                   </div>
 
                   {/* Time */}
-                  <div className="text-xs text-white/40 font-mono shrink-0">{email.time}</div>
+                  <div className="text-[10px] sm:text-xs text-white/40 font-mono shrink-0 hidden sm:block">{email.time}</div>
                 </motion.div>
               ))}
             </div>
 
             {/* Filtered out indicator */}
-            <div className="mt-6 flex items-center justify-center gap-2 text-white/20 text-xs">
+            <div className="mt-4 sm:mt-6 flex items-center justify-center gap-2 text-white/20 text-[10px] sm:text-xs">
               <div className="w-4 h-px bg-white/10" />
               <span>{allEmails.length - importantEmails.length} low-priority emails filtered</span>
               <div className="w-4 h-px bg-white/10" />

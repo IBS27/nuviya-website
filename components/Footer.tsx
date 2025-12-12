@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
   const [state, handleSubmit] = useForm('xeoypedn');
 
   return (
-    <footer id="waitlist" className="relative pt-32 pb-12 overflow-hidden flex flex-col items-center">
+    <footer id="waitlist" className="relative pt-16 sm:pt-24 md:pt-32 pb-8 sm:pb-12 overflow-hidden flex flex-col items-center">
       
       {/* Background Glow (Orb) */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80vw] h-[400px] bg-[#7B2CBF] blur-[150px] opacity-20 pointer-events-none rounded-t-full" />
@@ -22,10 +22,10 @@ export const Footer: React.FC = () => {
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
         >
-          <Logo className="w-16 h-16 text-white mx-auto mb-8 opacity-80" />
-          <h2 className="text-5xl md:text-7xl font-display font-light text-white mb-6">Take back your time.</h2>
+          <Logo className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 text-white mx-auto mb-6 md:mb-8 opacity-80" />
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-light text-white mb-4 md:mb-6">Take back your time.</h2>
           
-          <div className="max-w-md mx-auto mt-12 relative">
+          <div className="max-w-md mx-auto mt-8 md:mt-12 relative">
             {state.succeeded ? (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
             ) : (
               <form onSubmit={handleSubmit}>
                 <div className={`
-                  flex items-center bg-[#0a0510] border rounded-full p-2 pl-6 transition-all duration-300
+                  flex items-center bg-[#0a0510] border rounded-full p-1.5 sm:p-2 pl-4 sm:pl-6 transition-all duration-300
                   ${isFocused
                     ? 'border-[#7B2CBF] shadow-[0_0_30px_rgba(123,44,191,0.3)]'
                     : 'border-white/10'
@@ -58,11 +58,11 @@ export const Footer: React.FC = () => {
                   />
                   <Button
                     variant="primary"
-                    className="py-2 px-6 text-sm whitespace-nowrap"
+                    className="py-2.5 sm:py-2 px-4 sm:px-6 text-xs sm:text-sm whitespace-nowrap"
                     type="submit"
                     disabled={state.submitting}
                   >
-                    {state.submitting ? 'Joining...' : 'Initialize Agent'}
+                    {state.submitting ? 'Initializing...' : 'Initialize Agent'}
                   </Button>
                 </div>
                 <p className="mt-4 text-xs text-[#52525B]">Limited spots available for beta cohort.</p>
@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
           </div>
         </motion.div>
 
-        <div className="mt-32 pt-8 border-t border-white/5 text-xs text-[#52525B]">
+        <div className="mt-16 sm:mt-24 md:mt-32 pt-6 sm:pt-8 border-t border-white/5 text-xs text-[#52525B]">
            <p>© 2025 Nuviya</p>
         </div>
       </div>

@@ -16,23 +16,32 @@ export const WorkflowSection: FC = () => {
             <span className="w-2 h-2 rounded-full bg-[#9D4EDD] animate-pulse" />
             <span className="text-xs font-medium tracking-wide text-[#9D4EDD] uppercase">Modular Intelligence</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-display font-light text-white mb-6">
-            Design your perfect <br /> <span className="text-[#A1A1AA]">digital workforce.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-light text-white mb-4 md:mb-6">
+            Design your perfect <br className="hidden sm:inline" /> <span className="text-[#A1A1AA]">digital workforce.</span>
           </h2>
-          <p className="text-[#A1A1AA] text-lg max-w-2xl mx-auto">
+          <p className="text-[#A1A1AA] text-base sm:text-lg max-w-2xl mx-auto">
             Create custom agents for specific senders or topics. Connect triggers to actions with a visual builder that adapts to your mental model.
           </p>
         </div>
 
         {/* Workflow Diagram */}
         <div className="relative w-full max-w-5xl mx-auto">
-          {/* Scrollable container for mobile */}
-          <div className="overflow-x-auto pb-12 hide-scrollbar">
-            <div className="min-w-[800px] px-4">
-              <div className="grid grid-cols-3 gap-8 relative items-center">
-                
-                {/* Connecting Lines (SVG Layer) */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible" viewBox="0 0 100 100" preserveAspectRatio="none">
+          {/* Vertical stack on mobile, horizontal on desktop */}
+          <div className="pb-8 md:pb-12 px-4">
+            <div className="flex flex-col md:grid md:grid-cols-3 gap-10 md:gap-8 relative items-stretch md:items-center">
+
+                {/* Mobile: Single continuous dotted line behind all nodes */}
+                <div className="md:hidden absolute left-1/2 top-[60px] bottom-[60px] -translate-x-1/2 z-0 pointer-events-none">
+                  {/* Dotted line */}
+                  <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full border-l-2 border-dashed border-white/10" />
+                  {/* Animated dot 1 */}
+                  <div className="absolute left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#9D4EDD] shadow-[0_0_8px_#9D4EDD] animate-flow-down" />
+                  {/* Animated dot 2 - offset */}
+                  <div className="absolute left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#9D4EDD] shadow-[0_0_8px_#9D4EDD] animate-flow-down-delayed" />
+                </div>
+
+                {/* Connecting Lines (SVG Layer) - Hidden on mobile */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible hidden md:block" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <defs>
                     <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stopColor="rgba(123, 44, 191, 0)" />
@@ -57,7 +66,7 @@ export const WorkflowSection: FC = () => {
                 {/* Node 1: Trigger */}
                 <div className="relative z-10">
                   <div>
-                    <div className="text-xs font-mono text-[#A1A1AA] mb-3 uppercase tracking-wider pl-1">Trigger</div>
+                    <div className="text-xs font-mono text-[#A1A1AA] mb-2 md:mb-3 uppercase tracking-wider pl-1">Trigger</div>
                     <GlassCard className="p-5 border-[#7B2CBF]/30 bg-[#0a0510]/80 shadow-[0_0_30px_rgba(123,44,191,0.1)]">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-10 h-10 rounded-full bg-[#7B2CBF]/20 flex items-center justify-center text-[#9D4EDD]">
@@ -78,7 +87,7 @@ export const WorkflowSection: FC = () => {
                 {/* Node 2: The Agent */}
                 <div className="relative z-10">
                   <div>
-                    <div className="text-xs font-mono text-[#9D4EDD] mb-3 uppercase tracking-wider pl-1 flex items-center gap-2">
+                    <div className="text-xs font-mono text-[#9D4EDD] mb-2 md:mb-3 uppercase tracking-wider pl-1 flex items-center gap-2">
                        <Bot size={12} />
                        Active Agent
                     </div>
@@ -125,7 +134,7 @@ export const WorkflowSection: FC = () => {
                 {/* Node 3: Output */}
                 <div className="relative z-10">
                   <div>
-                    <div className="text-xs font-mono text-[#A1A1AA] mb-3 uppercase tracking-wider pl-1">Action</div>
+                    <div className="text-xs font-mono text-[#A1A1AA] mb-2 md:mb-3 uppercase tracking-wider pl-1">Action</div>
                     <GlassCard className="p-5 border-white/10 bg-[#0a0510]/80">
                        <div className="flex items-center gap-3 mb-4">
                         <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 border border-green-500/20">
@@ -150,20 +159,19 @@ export const WorkflowSection: FC = () => {
                   </div>
                 </div>
 
-              </div>
             </div>
           </div>
         </div>
 
         {/* Feature List Below */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-4xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12 max-w-4xl mx-auto px-4">
            {[
               { title: "Natural Language", desc: "Describe the workflow in plain English. Nuviya builds the logic nodes for you." },
               { title: "Secure Context", desc: "Agents run locally or in a private cloud. Your data never trains public models." },
               { title: "Multi-Modal", desc: "Process text, PDFs, spreadsheets, and calendar invites seamlessly." }
            ].map((item, i) => (
               <div key={i} className="text-center md:text-left">
-                 <h4 className="text-white font-medium mb-2">{item.title}</h4>
+                 <h4 className="text-white font-medium mb-1 md:mb-2">{item.title}</h4>
                  <p className="text-sm text-[#A1A1AA]">{item.desc}</p>
               </div>
            ))}

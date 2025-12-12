@@ -6,20 +6,20 @@ import { Logo } from './Logo';
 
 export const BentoGrid: FC = () => {
   return (
-    <section className="py-32 px-4 w-full max-w-7xl mx-auto" id="features">
-      <div className="mb-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-display font-light text-white mb-6">Built for the Agentic Age</h2>
-        <p className="text-[#A1A1AA] text-lg max-w-2xl mx-auto">Traditional email clients display messages. Nuviya understands them.</p>
+    <section className="py-16 md:py-32 px-4 w-full max-w-7xl mx-auto" id="features">
+      <div className="mb-10 md:mb-16 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-light text-white mb-4 md:mb-6">Built for the Agentic Age</h2>
+        <p className="text-[#A1A1AA] text-base sm:text-lg max-w-2xl mx-auto">Traditional email clients display messages. Nuviya understands them.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[340px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[340px]">
         
         {/* Card 1: Automator (Large) - Spans 2 cols */}
         <GlassCard className="md:col-span-2 md:row-span-1 p-0 relative group overflow-hidden">
            {/* Inner layout wrapper to enforce height and flex */}
-           <div className="flex flex-col sm:flex-row h-full">
+           <div className="flex flex-col md:flex-row h-full">
              {/* Left Content */}
-             <div className="p-8 relative z-20 flex flex-col justify-between w-full sm:w-[45%] bg-gradient-to-r from-[#030105]/50 to-transparent">
+             <div className="p-6 md:p-8 relative z-20 flex flex-col justify-between w-full md:w-[45%] bg-gradient-to-r from-[#030105]/50 to-transparent">
                 <div>
                     <div className="w-10 h-10 rounded-full bg-[#7B2CBF]/20 flex items-center justify-center mb-4 text-[#9D4EDD]">
                     <Calendar size={20} />
@@ -36,7 +36,7 @@ export const BentoGrid: FC = () => {
              </div>
 
              {/* Right Visualization: Mini Calendar UI */}
-             <div className="relative w-full sm:w-[55%] bg-[#0a0510]/30 border-l border-white/5 h-full overflow-hidden">
+             <div className="relative w-full md:w-[55%] bg-[#0a0510]/30 md:border-l border-white/5 h-64 md:h-full overflow-hidden">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]" />
                 
                 {/* Calendar Header */}
@@ -108,10 +108,10 @@ export const BentoGrid: FC = () => {
                <div className="relative w-full h-40 flex justify-center items-center mb-2 z-10">
                   
                   {/* Thread 1: Far Left, Tilted */}
-                  <motion.div 
+                  <motion.div
                     animate={{ y: [0, -6, 0], rotate: [-12, -15, -12], x: [-60, -55, -60] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute w-44 h-28 bg-[#0a0510] border border-white/10 rounded-xl p-4 shadow-xl origin-bottom-right flex flex-col justify-center"
+                    className="absolute w-32 sm:w-40 md:w-44 h-20 sm:h-24 md:h-28 bg-[#0a0510] border border-white/10 rounded-xl p-3 md:p-4 shadow-xl origin-bottom-right flex flex-col justify-center"
                     style={{ x: -50, rotate: -12 }}
                   >
                      <div className="space-y-2 opacity-60">
@@ -121,10 +121,10 @@ export const BentoGrid: FC = () => {
                   </motion.div>
 
                   {/* Thread 2: Far Right, Opposing Tilt */}
-                  <motion.div 
+                  <motion.div
                     animate={{ y: [0, 8, 0], rotate: [10, 15, 10], x: [50, 45, 50] }}
                     transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
-                    className="absolute w-44 h-28 bg-[#0a0510] border border-white/10 rounded-xl p-4 shadow-xl origin-bottom-left flex flex-col justify-center"
+                    className="absolute w-32 sm:w-40 md:w-44 h-20 sm:h-24 md:h-28 bg-[#0a0510] border border-white/10 rounded-xl p-3 md:p-4 shadow-xl origin-bottom-left flex flex-col justify-center"
                     style={{ x: 50, rotate: 10 }}
                   >
                       <div className="space-y-2 opacity-60">
@@ -135,10 +135,10 @@ export const BentoGrid: FC = () => {
                   </motion.div>
 
                    {/* Thread 3: Background Center, Slight Tilt */}
-                  <motion.div 
+                  <motion.div
                     animate={{ y: [0, -4, 0], rotate: [-5, 0, -5] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute w-44 h-28 bg-[#0a0510] border border-white/10 rounded-xl p-4 shadow-xl -z-10 flex flex-col justify-center"
+                    className="absolute w-32 sm:w-40 md:w-44 h-20 sm:h-24 md:h-28 bg-[#0a0510] border border-white/10 rounded-xl p-3 md:p-4 shadow-xl -z-10 flex flex-col justify-center"
                     style={{ y: -20, rotate: -5 }}
                   >
                       <div className="space-y-2 opacity-50">
@@ -148,10 +148,10 @@ export const BentoGrid: FC = () => {
                   </motion.div>
                   
                   {/* Focus Card (Top of the messy pile) */}
-                  <motion.div 
+                  <motion.div
                     animate={{ y: [0, 3, 0], rotate: [2, 4, 2] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute w-44 h-28 bg-[#0a0510] border border-white/10 rounded-xl p-4 shadow-xl z-10 flex flex-col justify-center"
+                    className="absolute w-32 sm:w-40 md:w-44 h-20 sm:h-24 md:h-28 bg-[#0a0510] border border-white/10 rounded-xl p-3 md:p-4 shadow-xl z-10 flex flex-col justify-center"
                     style={{ rotate: 2 }}
                   >
                       <div className="flex items-center gap-2 mb-3">
@@ -306,7 +306,7 @@ export const BentoGrid: FC = () => {
         </GlassCard>
 
         {/* Card 4: Integration (Standard) - Heartbeat Sync Animation */}
-        <GlassCard className="md:col-span-1 md:row-span-1 p-0 overflow-hidden relative group">
+        <GlassCard className="md:col-span-1 md:row-span-1 p-0 overflow-hidden relative group min-h-[340px]">
            {/* Background Grid - Faint */}
            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] opacity-30 pointer-events-none" />
 
