@@ -1,0 +1,6 @@
+# Robots.txt for Nuviya
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nuviya.site/sitemap.xml

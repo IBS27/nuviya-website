@@ -1,9 +1,9 @@
-import React from 'react';
+import type { FC } from 'react';
 import { motion } from 'framer-motion';
 import { GlassCard } from './ui/GlassCard';
-import { Mail, Calendar, FileText, CheckCircle2, ArrowRight, Zap, Bot } from 'lucide-react';
+import { Mail, FileText, CheckCircle2, ArrowRight, Zap, Bot } from 'lucide-react';
 
-export const WorkflowSection: React.FC = () => {
+export const WorkflowSection: FC = () => {
   return (
     <section id="agents" className="py-24 md:py-32 px-4 relative overflow-hidden scroll-mt-24">
       {/* Background Ambience - Local glow to supplement global */}

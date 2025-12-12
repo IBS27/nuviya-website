@@ -36,7 +36,14 @@ export const Hero: React.FC = () => {
           transition={{ delay: 0.2, duration: 1 }}
           className="font-display font-light text-6xl md:text-8xl tracking-tighter text-white mb-6 leading-[0.9]"
         >
-          Your Inbox, <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">Handled.</span>
+          Your Inbox, <span
+            style={{
+              background: 'linear-gradient(to bottom, white, rgba(255,255,255,0.4))',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent'
+            }}
+          >Handled.</span>
         </motion.h1>
 
         {/* Subheadline */}

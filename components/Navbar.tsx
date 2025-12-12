@@ -8,23 +8,33 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-      <div className="flex items-center justify-between px-6 py-3 bg-[#0a0510]/60 backdrop-blur-xl border border-white/10 rounded-full w-full max-w-4xl shadow-2xl">
-        <div className="flex items-center gap-3">
-          <Logo className="w-6 h-6 text-white" />
-          <span className="font-display font-medium text-lg tracking-tight text-white hidden sm:block">Nuviya</span>
-        </div>
-        
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#A1A1AA]">
-          <a href="#features" className="hover:text-white transition-colors">Features</a>
-          <a href="#agents" className="hover:text-white transition-colors">Agents</a>
-          <a href="#manifesto" className="hover:text-white transition-colors">Manifesto</a>
-        </div>
+    <>
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#7B2CBF] focus:text-white focus:rounded-lg focus:outline-none"
+      >
+        Skip to main content
+      </a>
 
-        <Button variant="primary" className="px-5 py-2 text-sm" onClick={() => scrollTo('waitlist')}>
-          Join Waitlist
-        </Button>
-      </div>
-    </nav>
+      <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4" role="navigation" aria-label="Main navigation">
+        <div className="flex items-center justify-between px-6 py-3 bg-[#0a0510]/60 backdrop-blur-xl border border-white/10 rounded-full w-full max-w-4xl shadow-2xl">
+          <div className="flex items-center gap-3">
+            <Logo className="w-6 h-6 text-white" aria-hidden="true" />
+            <span className="font-display font-medium text-lg tracking-tight text-white hidden sm:block">Nuviya</span>
+          </div>
+
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#A1A1AA]">
+            <a href="#features" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#7B2CBF] focus:ring-offset-2 focus:ring-offset-[#030105] rounded">Features</a>
+            <a href="#agents" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#7B2CBF] focus:ring-offset-2 focus:ring-offset-[#030105] rounded">Agents</a>
+            <a href="#manifesto" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#7B2CBF] focus:ring-offset-2 focus:ring-offset-[#030105] rounded">Manifesto</a>
+          </div>
+
+          <Button variant="primary" className="px-5 py-2 text-sm" onClick={() => scrollTo('waitlist')}>
+            Join Waitlist
+          </Button>
+        </div>
+      </nav>
+    </>
   );
 };

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const COLORS = {
   bg: '#030105',
   primary: '#7B2CBF',

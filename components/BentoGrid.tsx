@@ -1,10 +1,10 @@
-import React from 'react';
+import type { FC } from 'react';
 import { motion } from 'framer-motion';
 import { GlassCard } from './ui/GlassCard';
-import { Calendar, Bot, Share2, Layers, ArrowRight, Check, Sparkles, FileText, Zap, Slack, Github } from 'lucide-react';
+import { Calendar, Bot, Share2, Layers, Check, Slack, Github } from 'lucide-react';
 import { Logo } from './Logo';
 
-export const BentoGrid: React.FC = () => {
+export const BentoGrid: FC = () => {
   return (
     <section className="py-32 px-4 w-full max-w-7xl mx-auto" id="features">
       <div className="mb-16 text-center">
