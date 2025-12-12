@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { TransformationSection } from './components/TransformationSection';
 import { BentoGrid } from './components/BentoGrid';
 import { WorkflowSection } from './components/WorkflowSection';
+import { MemorySection } from './components/MemorySection';
 import { SmartTriage } from './components/SmartTriage';
 import { Manifesto } from './components/Manifesto';
 import { Footer } from './components/Footer';
@@ -60,6 +61,7 @@ function App() {
           <TransformationSection />
           <BentoGrid />
           <WorkflowSection />
+          <MemorySection />
           <SmartTriage />
           <Manifesto />
         </main>

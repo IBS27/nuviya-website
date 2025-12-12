@@ -9,7 +9,7 @@ export const BentoGrid: FC = () => {
     <section className="py-16 md:py-32 px-4 w-full max-w-7xl mx-auto" id="features">
       <div className="mb-10 md:mb-16 text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-light text-white mb-4 md:mb-6">Built for the Agentic Age</h2>
-        <p className="text-[#A1A1AA] text-base sm:text-lg max-w-2xl mx-auto">Traditional email clients display messages. Nuviya understands them.</p>
+        <p className="text-[#A1A1AA] text-base sm:text-lg max-w-2xl mx-auto">Traditional email clients display messages. Nuviya acts on them.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[340px]">
@@ -98,7 +98,7 @@ export const BentoGrid: FC = () => {
                 <Bot size={20} />
               </div>
               <h3 className="text-2xl text-white font-medium mb-2">Instant Synthesis</h3>
-              <p className="text-[#A1A1AA] text-sm leading-relaxed">Chaos into clarity. Nuviya turns messy threads into actionable briefs.</p>
+              <p className="text-[#A1A1AA] text-sm leading-relaxed">Chaos into clarity. Nuviya turns messy threads into clear summaries.</p>
             </div>
 
             {/* Visual: Elegant Flow */}

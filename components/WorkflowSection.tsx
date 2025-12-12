@@ -20,7 +20,7 @@ export const WorkflowSection: FC = () => {
             Design your perfect <br className="hidden sm:inline" /> <span className="text-[#A1A1AA]">digital workforce.</span>
           </h2>
           <p className="text-[#A1A1AA] text-base sm:text-lg max-w-2xl mx-auto">
-            Create custom agents for specific senders or topics. Connect triggers to actions with a visual builder that adapts to your mental model.
+            Create custom agents for specific senders or topics. Connect triggers to actions with a visual builder that works the way you think.
           </p>
         </div>
 

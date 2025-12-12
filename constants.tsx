@@ -8,7 +8,7 @@ export const COLORS = {
 export const CONTENT = {
   hero: {
     headline: "Your Inbox, Handled.",
-    subheadline: "The first agentic email client built for flow. Nuviya filters the chaos, understands the context, and executes the work—so you don't have to.",
+    subheadline: "The first agentic email client built for flow. Nuviya filters the chaos, understands the context, and executes the work so you don't have to.",
     cta: "Get Early Access",
   },
   transformation: {

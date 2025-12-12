@@ -203,7 +203,7 @@ export const TransformationSection: React.FC = () => {
              style={{ opacity: orderOpacity }}
              className="text-[#A1A1AA] max-w-xl mx-auto text-base sm:text-lg"
            >
-             Nuviya automatically categorizes and prioritizes your stream.
+             Nuviya sorts and prioritizes what matters.
            </motion.p>
         </div>
 

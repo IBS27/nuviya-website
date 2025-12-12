@@ -30,15 +30,15 @@ export const Manifesto: React.FC = () => {
           {/* Body copy */}
           <div className="space-y-4 sm:space-y-6 text-[#A1A1AA] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             <p>
-              For decades we have functioned as the middleware. We sort, filter, and respond to an endless stream of data that machines can handle better than we ever could.
+              For decades, we've been the middleware. We sort, filter, and respond to an endless stream of data that machines can handle better than we ever could.
             </p>
 
             <p>
-              We built Nuviya because your inbox should work for you, not the other way around. Every email that does not require your specific expertise is a decision you should not have to make.
+              We built Nuviya because your inbox should work for you, not the other way around. Every email that doesn't need your judgment is a decision you shouldn't have to make.
             </p>
 
             <p>
-              This is not about simply hiding notifications. It is about building a system that understands. A protocol that knows the difference between a client emergency and a newsletter. Between a genuine request and a polite FYI.
+              It's not about hiding notifications. It's about building a system that understands. A system that knows the difference between a client emergency and a newsletter. Between a genuine request and a polite FYI.
             </p>
           </div>
 
