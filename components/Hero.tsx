@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from './ui/Button';
-import { ArrowRight } from 'lucide-react';
 import { CONTENT } from '../constants';
 import { Logo } from './Logo';
 
 export const Hero: React.FC = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden px-4">
       {/* Background Ambience - Subtle overlay to enhance center focus */}
@@ -56,20 +50,6 @@ export const Hero: React.FC = () => {
           {CONTENT.hero.subheadline}
         </motion.p>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 1 }}
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center"
-        >
-          <Button variant="primary" className="text-lg px-8 py-4" onClick={() => scrollTo('waitlist')}>
-            {CONTENT.hero.cta}
-          </Button>
-          <Button variant="ghost" className="text-sm px-6" icon={<ArrowRight size={16} />} onClick={() => scrollTo('manifesto')}>
-            Read the Manifesto
-          </Button>
-        </motion.div>
       </div>
 
       {/* The Event Horizon (Bottom Glow) */}
