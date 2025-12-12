@@ -241,12 +241,7 @@ export const MemorySection: FC = () => {
           <div className="space-y-6">
 
             {/* Search Interface */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
+            <div>
               <GlassCard className="p-0 overflow-hidden" hoverEffect={false}>
                 {/* Search Header */}
                 <div className="px-6 py-4 border-b border-white/5 bg-white/[0.02]">
@@ -294,13 +289,9 @@ export const MemorySection: FC = () => {
                     <span className="text-[10px] text-[#52525B]">2 found</span>
                   </div>
 
-                  {searchResults.map((result, i) => (
-                    <motion.div
+                  {searchResults.map((result) => (
+                    <div
                       key={result.name}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4 + i * 0.1 }}
                       className="flex items-start gap-3 p-3 rounded-lg bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all cursor-pointer group"
                     >
                       <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-blue-300 shrink-0">
@@ -314,20 +305,14 @@ export const MemorySection: FC = () => {
                         <p className="text-xs text-[#A1A1AA] mt-0.5">{result.context}</p>
                       </div>
                       <ArrowRight size={14} className="text-[#52525B] group-hover:text-[#9D4EDD] transition-colors shrink-0 mt-1" />
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </GlassCard>
-            </motion.div>
+            </div>
 
             {/* Value Props */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
                   title: 'Automatic Learning',
@@ -343,19 +328,13 @@ export const MemorySection: FC = () => {
                   <p className="text-xs text-[#A1A1AA] leading-relaxed">{item.desc}</p>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* Privacy note */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="flex items-center gap-2 text-xs text-[#52525B]"
-            >
+            <div className="flex items-center gap-2 text-xs text-[#52525B]">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               <span>Private & secure. Your data never trains public models.</span>
-            </motion.div>
+            </div>
 
           </div>
         </div>
