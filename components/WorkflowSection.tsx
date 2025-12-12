@@ -5,17 +5,13 @@ import { Mail, FileText, CheckCircle2, ArrowRight, Zap, Bot } from 'lucide-react
 
 export const WorkflowSection: FC = () => {
   return (
-    <section id="agents" className="py-24 md:py-32 px-4 relative overflow-hidden scroll-mt-24">
+    <section id="agents" className="pt-24 pb-32 md:pt-48 md:pb-56 px-4 relative overflow-hidden scroll-mt-24">
       {/* Background Ambience - Local glow to supplement global */}
       {/* Fixed opacity-05 typo to opacity-5 to reduce intensity */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[#7B2CBF] opacity-5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#9D4EDD] animate-pulse" />
-            <span className="text-xs font-medium tracking-wide text-[#9D4EDD] uppercase">Modular Intelligence</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-light text-white mb-4 md:mb-6">
             Design your perfect <br className="hidden sm:inline" /> <span className="text-[#A1A1AA]">digital workforce.</span>
           </h2>

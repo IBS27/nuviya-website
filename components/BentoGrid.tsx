@@ -6,7 +6,7 @@ import { Logo } from './Logo';
 
 export const BentoGrid: FC = () => {
   return (
-    <section className="py-16 md:py-32 px-4 w-full max-w-7xl mx-auto" id="features">
+    <section className="pt-16 pb-32 md:pt-48 md:pb-56 px-4 w-full max-w-7xl mx-auto" id="features">
       <div className="mb-10 md:mb-16 text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-light text-white mb-4 md:mb-6">Built for the Agentic Age</h2>
         <p className="text-[#A1A1AA] text-base sm:text-lg max-w-2xl mx-auto">Traditional email clients display messages. Nuviya acts on them.</p>

@@ -124,10 +124,6 @@ export const MemorySection: FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#9D4EDD] animate-pulse" />
-            <span className="text-xs font-medium tracking-wide text-[#9D4EDD] uppercase">Contextual Intelligence</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-light text-white mb-4 md:mb-6">
             Your second brain, <br className="hidden sm:inline" /> <span className="text-[#A1A1AA]">built from every thread.</span>
           </h2>
