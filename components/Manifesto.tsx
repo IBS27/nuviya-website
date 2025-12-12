@@ -30,15 +30,15 @@ export const Manifesto: React.FC = () => {
           {/* Body copy */}
           <div className="space-y-6 text-[#A1A1AA] text-lg leading-relaxed max-w-2xl mx-auto">
             <p>
-              For decades, we've been the middleware — sorting, filtering, responding to an endless stream that machines could handle better than we ever could.
+              For decades we have functioned as the middleware. We sort, filter, and respond to an endless stream of data that machines can handle better than we ever could.
             </p>
 
             <p>
-              We built Nuviya because your inbox should work <span className="text-white">for</span> you, not the other way around. Every email that doesn't need your attention is a decision you shouldn't have to make.
+              We built Nuviya because your inbox should work for you, not the other way around. Every email that does not require your specific expertise is a decision you should not have to make.
             </p>
 
             <p>
-              This isn't about hiding notifications. It's about building a system that <span className="text-white">understands</span> — one that knows the difference between a client emergency and a newsletter, between a genuine request and a polite FYI.
+              This is not about simply hiding notifications. It is about building a system that understands. A protocol that knows the difference between a client emergency and a newsletter. Between a genuine request and a polite FYI.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export const Manifesto: React.FC = () => {
           <div className="mt-12 pt-8 border-t border-white/5 max-w-xl mx-auto">
             <p className="text-xl md:text-2xl font-display font-light text-white leading-relaxed">
               The future of email isn't a better filter.<br />
-              <span className="text-[#A1A1AA]">It's a thoughtful agent.</span>
+              <span className="text-white font-medium">It's a thoughtful agent.</span>
             </p>
           </div>
 
