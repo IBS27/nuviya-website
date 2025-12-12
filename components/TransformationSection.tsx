@@ -9,7 +9,7 @@ interface Email {
   preview: string;
   time: string;
   isImportant: boolean;
-  avatarColor: string;
+  avatarBg: string;
 }
 
 // Realistic email data - mix of important and unimportant
@@ -23,7 +23,7 @@ const allEmails: Email[] = [
     preview: "Hi, the finance team needs your sign-off on the Q4 projections by EOD...",
     time: "9:42 AM",
     isImportant: true,
-    avatarColor: "bg-[#7B2CBF]"
+    avatarBg: "#7B2CBF"
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const allEmails: Email[] = [
     preview: "The main API server is returning 503 errors. Customer reports coming in...",
     time: "9:38 AM",
     isImportant: true,
-    avatarColor: "bg-[#9D4EDD]"
+    avatarBg: "#9D4EDD"
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const allEmails: Email[] = [
     preview: "Your recent lab work has been processed. Please schedule a follow-up...",
     time: "9:15 AM",
     isImportant: true,
-    avatarColor: "bg-emerald-500"
+    avatarBg: "#10b981"
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const allEmails: Email[] = [
     preview: "The annual service agreement expires in 3 days. Attached is the renewal...",
     time: "8:52 AM",
     isImportant: true,
-    avatarColor: "bg-blue-500"
+    avatarBg: "#3b82f6"
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ const allEmails: Email[] = [
     preview: "Don't forget! Saturday at 6pm. Can you bring the cake from...",
     time: "8:30 AM",
     isImportant: true,
-    avatarColor: "bg-pink-500"
+    avatarBg: "#ec4899"
   },
   // Unimportant emails (these get filtered out)
   {
@@ -74,7 +74,7 @@ const allEmails: Email[] = [
     preview: "See who's looking at your profile and expand your network...",
     time: "9:41 AM",
     isImportant: false,
-    avatarColor: "bg-blue-700"
+    avatarBg: "#1d4ed8"
   },
   {
     id: 7,
@@ -84,7 +84,7 @@ const allEmails: Email[] = [
     preview: "Limited time only! Don't miss these incredible savings on...",
     time: "9:35 AM",
     isImportant: false,
-    avatarColor: "bg-orange-500"
+    avatarBg: "#f97316"
   },
   {
     id: 8,
@@ -94,7 +94,7 @@ const allEmails: Email[] = [
     preview: "This week's roundup of articles, tips, and must-read stories...",
     time: "9:20 AM",
     isImportant: false,
-    avatarColor: "bg-gray-500"
+    avatarBg: "#6b7280"
   },
   {
     id: 9,
@@ -104,7 +104,7 @@ const allEmails: Email[] = [
     preview: "You have 3 new followers and 15 likes on your recent posts...",
     time: "9:10 AM",
     isImportant: false,
-    avatarColor: "bg-gray-700"
+    avatarBg: "#374151"
   },
   {
     id: 10,
@@ -114,7 +114,7 @@ const allEmails: Email[] = [
     preview: "The market is moving fast. Don't miss your chance to...",
     time: "9:05 AM",
     isImportant: false,
-    avatarColor: "bg-yellow-600"
+    avatarBg: "#ca8a04"
   },
   {
     id: 11,
@@ -124,7 +124,7 @@ const allEmails: Email[] = [
     preview: "See your top songs, artists, and listening habits from...",
     time: "8:45 AM",
     isImportant: false,
-    avatarColor: "bg-green-600"
+    avatarBg: "#16a34a"
   },
   {
     id: 12,
@@ -134,7 +134,7 @@ const allEmails: Email[] = [
     preview: "Complete your purchase before these items sell out...",
     time: "8:22 AM",
     isImportant: false,
-    avatarColor: "bg-orange-600"
+    avatarBg: "#ea580c"
   }
 ];
 
@@ -248,7 +248,7 @@ export const TransformationSection: React.FC = () => {
                 >
                   <div className="flex items-start p-2 sm:p-3 gap-2 sm:gap-3">
                     {/* Avatar */}
-                    <div className={`w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full ${email.avatarColor} flex items-center justify-center text-white text-[10px] sm:text-xs font-semibold shrink-0`}>
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white text-[10px] sm:text-xs font-semibold shrink-0" style={{ backgroundColor: email.avatarBg }}>
                       {email.initials}
                     </div>
 
@@ -301,7 +301,7 @@ export const TransformationSection: React.FC = () => {
                   <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#9D4EDD] shadow-[0_0_10px_#9D4EDD] shrink-0" />
 
                   {/* Avatar */}
-                  <div className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full ${email.avatarColor} flex items-center justify-center text-white text-xs sm:text-sm font-semibold shrink-0`}>
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-semibold shrink-0" style={{ backgroundColor: email.avatarBg }}>
                     {email.initials}
                   </div>
 

@@ -15,7 +15,7 @@ const emails = [
     subject: 'Q4 Roadmap Review',
     preview: 'Hey team, I\'ve updated the Figma file with the latest components. Please take a look before the standup...',
     time: 'Just now',
-    avatarColors: 'from-blue-500 to-purple-500',
+    avatarGradient: 'linear-gradient(to bottom right, #3b82f6, #a855f7)',
   },
   {
     sender: 'David Chen',
@@ -23,7 +23,7 @@ const emails = [
     subject: 'Re: API Migration Timeline',
     preview: 'Following up on our discussion yesterday. Can we sync tomorrow at 2pm to finalize the deployment schedule?',
     time: '10 min ago',
-    avatarColors: 'from-emerald-500 to-teal-500',
+    avatarGradient: 'linear-gradient(to bottom right, #10b981, #14b8a6)',
   },
   {
     sender: 'Newsletter Bot',
@@ -31,7 +31,7 @@ const emails = [
     subject: '🎉 Your Weekly Digest is Here!',
     preview: 'You have 47 unread articles waiting for you. Click here to catch up on the latest trends in tech...',
     time: '1 hour ago',
-    avatarColors: 'from-orange-500 to-red-500',
+    avatarGradient: 'linear-gradient(to bottom right, #f97316, #ef4444)',
   },
 ];
 
@@ -119,7 +119,7 @@ export const SmartTriage: React.FC = () => {
                    {/* Email Content */}
                    <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${emails[currentIndex].avatarColors}`} />
+                        <div className="w-10 h-10 rounded-full" style={{ background: emails[currentIndex].avatarGradient }} />
                         <div>
                           <div className="text-white font-medium">{emails[currentIndex].sender}</div>
                           <div className="text-xs text-[#A1A1AA]">{emails[currentIndex].role}</div>
