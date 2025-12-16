@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TransformationSection } from './components/TransformationSection';
@@ -67,6 +68,7 @@ function App() {
         </main>
 
         <Footer />
+        <Analytics />
       </div>
     </ErrorBoundary>
   );
