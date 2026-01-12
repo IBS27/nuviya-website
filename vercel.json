@@ -44,5 +44,8 @@
       ]
     }
   ],
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+  ]
 }
