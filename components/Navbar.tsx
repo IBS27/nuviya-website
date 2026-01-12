@@ -4,7 +4,11 @@ import { Button } from './ui/Button';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  title?: string;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ title = "Nuviya" }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollTo = (id: string) => {
@@ -42,7 +46,7 @@ export const Navbar: React.FC = () => {
             aria-label="Scroll to top"
           >
             <Logo className="w-6 h-6 text-white" aria-hidden="true" />
-            <span className="font-display font-medium text-lg tracking-tight text-white hidden sm:block">Nuviya</span>
+            <span className="font-display font-medium text-lg tracking-tight text-white hidden sm:block">{title}</span>
           </button>
 
           {/* Desktop Navigation */}
