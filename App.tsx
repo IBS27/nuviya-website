@@ -1,15 +1,9 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { TransformationSection } from './components/TransformationSection';
-import { BentoGrid } from './components/BentoGrid';
-import { WorkflowSection } from './components/WorkflowSection';
-import { MemorySection } from './components/MemorySection';
-import { SmartTriage } from './components/SmartTriage';
-import { Manifesto } from './components/Manifesto';
-import { Footer } from './components/Footer';
+import { HomePage } from './pages/HomePage';
+import { MailPage } from './pages/MailPage';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -55,23 +49,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 function App() {
   return (
     <ErrorBoundary>
-      <div className="min-h-screen text-white selection:bg-[#7B2CBF] selection:text-white">
-        <Navbar />
-
-        <main id="main-content">
-          <Hero />
-          <TransformationSection />
-          <BentoGrid />
-          <WorkflowSection />
-          <MemorySection />
-          <SmartTriage />
-          <Manifesto />
-        </main>
-
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/mail" element={<MailPage />} />
+        </Routes>
+      </BrowserRouter>
+      <Analytics />
+      <SpeedInsights />
     </ErrorBoundary>
   );
 }
