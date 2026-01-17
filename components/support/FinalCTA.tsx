@@ -12,7 +12,7 @@ export const FinalCTA: FC = () => {
   const [state, handleSubmit] = useForm('xeoypedn');
 
   return (
-    <footer className="relative pt-24 sm:pt-32 md:pt-40 pb-8 sm:pb-12 overflow-hidden">
+    <footer id="final-cta" className="relative pt-24 sm:pt-32 md:pt-40 pb-8 sm:pb-12 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100vw] h-[500px] bg-[#7B2CBF] blur-[180px] opacity-15 pointer-events-none rounded-t-full" />
 

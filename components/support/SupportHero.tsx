@@ -49,7 +49,7 @@ export const SupportHero: FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
-          className="text-[#A1A1AA] text-base sm:text-lg md:text-xl max-w-2xl font-light mb-10 leading-relaxed"
+          className="text-[#A1A1AA] text-lg sm:text-xl md:text-2xl max-w-2xl font-light mb-10 leading-relaxed"
         >
           {SUPPORT_CONTENT.hero.subheadline}
         </motion.p>

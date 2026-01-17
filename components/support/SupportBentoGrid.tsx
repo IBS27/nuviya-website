@@ -92,10 +92,13 @@ export const SupportBentoGrid: FC = () => {
                       </p>
 
                       {/* Action hint */}
-                      <div className="mt-6 flex items-center gap-2 text-[#9D4EDD]">
+                      <button
+                        onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="mt-6 flex items-center gap-2 text-[#9D4EDD] cursor-pointer hover:text-[#9D4EDD]/80 transition-colors"
+                      >
                         <span className="text-xs font-medium">Delegate this issue</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </GlassCard>
